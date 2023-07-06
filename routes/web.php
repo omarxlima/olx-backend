@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 /**
  * Rota de utilidades
- * [ ] - ping responde pong
+ * [x] - ping responde pong
  *
  * -- Rotas de Autenticação * Autenticação via TOKEN
  * [ ] - /user/login -- login
@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Route;
  * [ ] - /user/index -- lista de usuários
  *
  * - Rotas de configuração geral
- * [ ] - /states -- listar os estados
+ * [x] - /states -- listar os estados
  * [ ] - /categories-- listar as categorias do sistema
  *
  * Rotas de anuncios CRUD
