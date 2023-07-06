@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+/**
+ * Rota de utilidades
+ * [ ] - ping responde pong
+ *
+ * -- Rotas de Autenticação * Autenticação via TOKEN
+ * [ ] - /user/login -- login
+ * [ ] - /user/registro -- registro do usuário
+ * [ ] - /user/me -- informações do usuário logado
+ * [ ] - /user/index -- lista de usuários
+ *
+ * - Rotas de configuração geral
+ * [ ] - /states -- listar os estados
+ * [ ] - /categories-- listar as categorias do sistema
+ *
+ * Rotas de anuncios CRUD
+ * [ ] - /Add/:id/image(delete ) -- deletar uma imagem
+ *
+ */
+
+
+ Route::get('ping',function() : JsonResponse{
+     return response()->json(['pong'=> true]);
+ });
