@@ -34,6 +34,5 @@ cp env.example .env
 http://localhost:8080/graphiql
 ```
 
-### Customize configuration
-See [Configuration to laravel](https://laravel.com/docs/11.x/sail/)
+
 
