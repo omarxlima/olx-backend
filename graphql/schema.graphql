@@ -10,13 +10,65 @@ type Query {
     users(
       name: String @where(operator: "like")
     ): [User!]! @paginate(defaultCount: 10)
+
+    state (
+       id: ID @eq 
+      name: String 
+    ): State @find
+
+    states(
+      name: String @where(operator: "like")
+    ): [State!]! @paginate(defaultCount: 10)
+
+    category (
+       id: ID @eq 
+      name: String 
+    ): Category @find
+
+      categories(
+      name: String @where(operator: "like")
+    ): [State!]! @paginate(defaultCount: 10)
+
+    advertise (
+       id: ID @eq 
+      title: String 
+    ): Advertise @find
+
+    advertisers(
+      title: String @where(operator: "like")
+    ): [Advertise!]! @paginate(defaultCount: 10)
+    
 }
 
 type User {
     id: ID!
     name: String!
     email: String!
+    state: State @belongsTo
     email_verified_at: DateTime
     created_at: DateTime!
     updated_at: DateTime!
 }
+
+type State {
+    id: ID!
+    name: String!
+    users: [User!]! @hasMany
+}
+
+type Category {
+   id: ID!
+    name: String!
+}
+
+type Advertise {
+    id: ID!
+    title: String!
+    price: Float!
+    is_negotiable: Boolean!
+    text: String
+    user: User @belongsTo
+    category: Category @belongsTo
+    state: State @belongsTo
+}
+
