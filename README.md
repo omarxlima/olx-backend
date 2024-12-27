@@ -35,5 +35,5 @@ http://localhost:8080/graphiql
 ```
 
 ### Customize configuration
-See [Configuration Reference- Laravel](https://laravel.com/docs/11.x/sail){:target="_blank"}.
+See [Configuration to laravel.com](https://laravel.com/docs/11.x/sail)
 
