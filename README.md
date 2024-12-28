@@ -33,6 +33,9 @@ cp env.example .env
 ```
 http://localhost:8080/graphiql
 ```
+## Example
+![Web 1](https://github.com/omarxlima/assets/raw/main/images/example-graphql2.png)
+
 
 
 
