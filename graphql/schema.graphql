@@ -89,6 +89,54 @@ type Mutation {
   ): User @update
 
   deleteUser(
-    id: ID!
+    id: ID! @whereKey
   ): User @delete
+
+  createState(
+    name: String
+  ): State @create
+
+  updateState(
+    name: String
+  ): State @update
+
+  deleteState(
+    id: ID! @whereKey
+  ): State @delete
+
+  createCategory(
+    name: String
+  ): Category @create
+
+  updateCategory(
+    name: String
+  ): Category @update
+
+  deleteCategory(
+    id: ID
+  ): Category @delete
+
+  createAdvertise(
+    title: String
+    price: Float
+    is_negotiable: Boolean
+    description: String
+    user_id: ID
+    category_id: ID
+    state_id: ID
+  ): Advertise @create
+
+  updateAdvertise(
+    title: String
+    price: Float
+    is_negotiable: Boolean
+    description: String
+    user_id: ID
+    category_id: ID
+    state_id: ID
+  ): Advertise @update
+
+  deleteAdvertise(
+    id: ID! @whereKey
+  ): Advertise @delete
 }
